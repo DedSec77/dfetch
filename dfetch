@@ -5,14 +5,30 @@ from colorama import Fore
 
 def dfetch():
     print("___________________")
-    print(Fore.BLUE + "User: " + os.environ['USER'] + Fore.RESET)
-    print(Fore.RED + "Shell: " + os.environ['SHELL'] + Fore.RESET)
-    print(Fore.YELLOW + "Wm: " + os.environ['XDG_CURRENT_DESKTOP'] + " " + os.environ['DESKTOP_SESSION'] + Fore.RESET)
-    print(Fore.GREEN + "Distro: " + distro.linux_distribution()[0] + Fore.RESET)
-    print(Fore.CYAN + "Language: " + os.environ['LANGUAGE'] + Fore.RESET)
+    try:
+        print(Fore.BLUE + "User: " + os.environ['USER'] + Fore.RESET)
+    except:
+        pass
+    try:
+        print(Fore.RED + "Shell: " + os.environ['SHELL'] + Fore.RESET)
+    except :
+        pass
+    try:
+        print(Fore.YELLOW + "Wm: " + os.environ['XDG_CURRENT_DESKTOP'] + " " + os.environ['DESKTOP_SESSION'] + Fore.RESET)
+    except :
+        pass
+    try:
+         print(Fore.GREEN + "Distro: " + distro.linux_distribution()[0] + Fore.RESET)
+    except :
+        pass
+    try:
+        print(Fore.CYAN + "Language: " + os.environ['LANGUAGE'] + Fore.RESET)
+    except:
+        pass
+    try:
+        print(Fore.LIGHTWHITE_EX + "Terminal: " +os.environ["TERM"])
+    except :
+        pass
     print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
 
-if os.name == "posix":
-    dfetch()
-else:
-    print("your system unsupported")
+dfetch()
