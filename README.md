@@ -17,5 +17,5 @@ chmod +x install_debian.sh
 <br/>
 # How use
 write in your console dfetch
-![alt text](https://imgur.com/GDAUOT6)
+[img]https://i.imgur.com/GDAUOT6.png[/img]
 
