@@ -2,13 +2,14 @@
 import distro
 import os
 from colorama import Fore
+import getpass
 
 def dfetch():
     print("___________________")
     try:
         print(Fore.BLUE + "User: " + os.environ['USER'] + Fore.RESET)
     except:
-        pass
+        print(Fore.BLUE + "User: " + getpass.getuser() + Fore.RESET)
     try:
         print(Fore.RED + "Shell: " + os.environ['SHELL'] + Fore.RESET)
     except :
