@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+import distro
+import os
+from colorama import Fore
+
+def dfetch():
+    print("___________________")
+    print(Fore.BLUE + "User: " + os.environ['USER'] + Fore.RESET)
+    print(Fore.RED + "Shell: " + os.environ['SHELL'] + Fore.RESET)
+    print(Fore.YELLOW + "Wm: " + os.environ['XDG_CURRENT_DESKTOP'] + " " + os.environ['DESKTOP_SESSION'] + Fore.RESET)
+    print(Fore.GREEN + "Distro: " + distro.linux_distribution()[0] + Fore.RESET)
+    print(Fore.CYAN + "Language: " + os.environ['LANGUAGE'] + Fore.RESET)
+    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
+
+if os.name == "posix":
+    dfetch()
+else:
+    print("your system unsupported")
