@@ -17,4 +17,4 @@ chmod +x install_debian.sh
 <br/>
 # How use
 write in your console dfetch
-file:///home/dedsec/Desktop/df.png
+<img src="https://imgur.com/a/rYLDAoh">
