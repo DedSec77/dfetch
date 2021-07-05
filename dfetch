@@ -3,6 +3,7 @@ import distro
 import os
 from colorama import Fore
 import getpass
+import psutil
 
 def dfetch():
     print("___________________")
@@ -30,6 +31,15 @@ def dfetch():
         print(Fore.LIGHTWHITE_EX + "Terminal: " +os.environ["TERM"])
     except :
         pass
-    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
+    try:
+        pid = os.getpid()
+        py = psutil.Process(pid)
+        mem = psutil.virtual_memory()
+        ram = round(mem.total / 1048576)
+        print(Fore.LIGHTRED_EX + "Ram: " + str(ram) + Fore.RESET)
+        print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
+
+    except :
+        pass
 
 dfetch()

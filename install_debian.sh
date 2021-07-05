@@ -3,5 +3,6 @@ sudo apt install python2
 pip install --upgrade pip
 pip3 install colorama
 pip3 install distro
+pip3 install psutil
 sudo chmod +x dfetch
 sudo cp dfetch /usr/bin
