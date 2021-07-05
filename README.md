@@ -17,5 +17,5 @@ chmod +x install_debian.sh
 <br/>
 # How use
 write in your console dfetch
-[img]https://i.imgur.com/GDAUOT6.png[/img]
+<blockquote class="imgur-embed-pub" lang="en" data-id="GDAUOT6"><a href="https://imgur.com/GDAUOT6">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
