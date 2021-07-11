@@ -13,7 +13,8 @@ def dfetch():
     except:
         print(Fore.BLUE + "User: " + getpass.getuser() + Fore.RESET)
     try:
-        print(Fore.RED + "Shell: " + os.environ['SHELL'] + Fore.RESET)
+        shl = os.environ['SHELL'].replace("/usr/bin/", "")
+        print(Fore.RED + "Shell: " +  shl + Fore.RESET)
     except :
         pass
     try:
