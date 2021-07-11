@@ -4,6 +4,7 @@ import os
 from colorama import Fore
 import getpass
 import psutil
+import uptime
 
 def dfetch():
     print("___________________")
@@ -37,9 +38,14 @@ def dfetch():
         mem = psutil.virtual_memory()
         ram = round(mem.total / 1048576)
         print(Fore.LIGHTRED_EX + "Ram: " + str(ram) + Fore.RESET)
-        print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
 
     except :
         pass
-
+        
+    try:
+        timeeelinux = uptime._boottime_linux()
+        print(Fore.LIGHTBLUE_EX + "Uptime: "+ str(timeeelinux) + Fore.RESET)
+    except :
+        pass
+    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
 dfetch()
